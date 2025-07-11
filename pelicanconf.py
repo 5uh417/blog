@@ -4,6 +4,16 @@ SITEURL = ""
 
 PATH = "content"
 
+# Content paths
+ARTICLE_PATHS = ['posts']
+PAGE_PATHS = ['pages']
+STATIC_PATHS = ['static']
+
+# Static files
+EXTRA_PATH_METADATA = {
+    'static/img': {'path': 'img'},
+}
+
 TIMEZONE = 'Asia/Kolkata'
 
 DEFAULT_LANG = 'en'
@@ -57,8 +67,9 @@ CATEGORY_SAVE_AS = '{slug}/index.html'
 # Archives - simple name
 ARCHIVES_SAVE_AS = 'archives/index.html'
 
-# Tags - disable individual tag pages, keep only tags listing
-TAG_SAVE_AS = ''
+# Tags - clean URL structure
+TAG_URL = '{slug}/'
+TAG_SAVE_AS = '{slug}/index.html'
 TAGS_SAVE_AS = 'tags/index.html'
 
 # Categories listing - simple name
