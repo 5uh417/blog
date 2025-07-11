@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="posts">
+        {% for article in articles_page.object_list %}
+            <article class="post on-list">
+                <h2 class="post-title">
+                    <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+                </h2>
+
+                <div class="post-meta">
+                    <time class="post-date">
+                        {{ article.locale_date }}
+                    </time>
+                    {% if article.author %}
+                        <span class="post-author">{{ article.author }}</span>
+                    {% endif %}
+                </div>
+
+                {% if article.tags %}
+                    <span class="post-tags">
+                        {% for tag in article.tags %}
+                            #<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag.name }}</a>{% if not loop.last %}&nbsp;{% endif %}
+                        {% endfor %}
+                    </span>
+                {% endif %}
+
+                {% if article.cover %}
+                    <div class="post-cover">
+                        <img src="{{ article.cover }}" alt="{{ article.title }}" />
+                    </div>
+                {% endif %}
+
+                <div class="post-content">
+                    {% if article.summary %}
+                        {{ article.summary }}
+                    {% else %}
+                        {{ article.content|truncate(300) }}
+                    {% endif %}
+                </div>
+
+                <div>
+                    <a class="read-more" href="{{ SITEURL }}/{{ article.url }}">[Read more]</a>
+                </div>
+            </article>
+        {% endfor %}
+
+        {% if articles_page.has_other_pages() %}
+            <nav class="pagination">
+                {% if articles_page.has_previous() %}
+                    <a class="pagination__item pagination__item--prev" href="{{ SITEURL }}/{{ articles_previous_page.url if articles_previous_page else '#' }}">
+                        <span class="pagination__icon">←</span>
+                        <span class="pagination__label">Previous</span>
+                    </a>
+                {% else %}
+                    <div></div>
+                {% endif %}
+
+                {% if articles_page.has_next() %}
+                    <a class="pagination__item pagination__item--next" href="{{ SITEURL }}/{{ articles_next_page.url if articles_next_page else '#' }}">
+                        <span class="pagination__label">Next</span>
+                        <span class="pagination__icon">→</span>
+                    </a>
+                {% else %}
+                    <div></div>
+                {% endif %}
+            </nav>
+        {% endif %}
+    </div>
+{% endblock content %}

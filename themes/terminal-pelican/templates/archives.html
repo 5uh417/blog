@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="archives">
+        {% for year, articles in dates|groupby('date.year')|reverse %}
+            <div class="archive-year">
+                <h2 class="archive-year__title">{{ year }}</h2>
+                <div class="archive-articles">
+                    {% for article in articles %}
+                        <article class="archive-article">
+                            <time class="archive-article__date" datetime="{{ article.date.isoformat() }}">
+                                {{ article.date.strftime('%B %d') }}
+                            </time>
+                            <a class="archive-article__link" href="{{ SITEURL }}/{{ article.url }}">
+                                {{ article.title }}
+                            </a>
+                        </article>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}

@@ -1,0 +1,3 @@
+pelican[markdown]>=4.8.0
+beautifulsoup4
+typogrify
