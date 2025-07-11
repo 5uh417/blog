@@ -23,11 +23,11 @@ SOCIAL = (
     ("LinkedIn", "https://linkedin.com/in/suhailmirza"),
 )
 
-# Menu items
+# Menu items - relative paths that work with SITEURL
 MENUITEMS = (
-    ('About', '/about/'),
-    ('Tags', '/tags/'),
-    ('Archive', '/archives/'),
+    ('About', 'about/'),
+    ('Tags', 'tags/'),
+    ('Archive', 'archives/'),
 )
 
 DEFAULT_PAGINATION = 10
