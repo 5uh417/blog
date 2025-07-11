@@ -1,10 +1,8 @@
 ---
-title: About
+title: About Me
 date: 2025-07-11
 status: published
 ---
-
-# About Me
 
 Welcome to my digital corner of the web. I'm **Suhail**, a Staff Software Engineer and DevOps Specialist who lives at the intersection of clean code, scalable systems, and operational excellence.
 
@@ -23,15 +21,6 @@ I'm passionate about:
 > "Code should serve its environment as gracefully as a well-oiled tool. Fast. Clear. Uncomplicated."
 
 I believe in building systems that work *with* the engineer, not against them — whether it's a terminal workflow, an automation pipeline, or a deployment strategy.
-
-## Current Focus
-
-Right now I'm diving deep into:
-
-- **Agentic AI and Google ADK** — integrating LLM agents with infrastructure tools like Puppet  
-- **Microservices architecture** — designing systems for scale, observability, and resilience  
-- **Impact analysis tooling** — mapping how code changes propagate across node groups  
-- **Multi-PuppetDB orchestration** — tracking deployment success across distributed environments  
 
 ## Beyond Code
 

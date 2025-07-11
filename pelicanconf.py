@@ -10,9 +10,9 @@ PAGE_PATHS = ['pages']
 STATIC_PATHS = ['static']
 
 # Static files
-EXTRA_PATH_METADATA = {
-    'static/img': {'path': 'img'},
-}
+# EXTRA_PATH_METADATA = {
+#     'static/img': {'path': 'img'},
+# }
 
 TIMEZONE = 'Asia/Kolkata'
 
