@@ -33,7 +33,7 @@ SOCIAL = (
 MENUITEMS = (
     ('About', '/pages/about/'),
     ('Tags', '/tags/'),
-    ('Archives', '/archives/'),
+    ('Archive', '/archives/'),
 )
 
 DEFAULT_PAGINATION = 10
