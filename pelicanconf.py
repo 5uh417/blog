@@ -1,5 +1,5 @@
 AUTHOR = 'Suhail'
-SITENAME = "Suhail's Blog"
+SITENAME = "~/dev/thoughts"
 SITEURL = ""
 
 PATH = "content"
@@ -15,23 +15,17 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
-LINKS = (
-    ("Pelican", "https://getpelican.com/"),
-    ("Python.org", "https://www.python.org/"),
-    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
-    ("You can modify those links in your config file", "#"),
-)
 
-# Social widget
+# Social links
 SOCIAL = (
-    ("You can add links in your config file", "#"),
-    ("Another social link", "#"),
+    ("GitHub", "https://github.com/5uh417"),
+    ("Twitter", "https://twitter.com/5uh417"),
+    ("LinkedIn", "https://linkedin.com/in/suhailmirza"),
 )
 
 # Menu items
 MENUITEMS = (
-    ('About', '/pages/about/'),
+    ('About', '/about/'),
     ('Tags', '/tags/'),
     ('Archive', '/archives/'),
 )
@@ -44,33 +38,33 @@ THEME = 'themes/terminal-pelican'
 ARTICLE_URL = '{date:%Y}/{date:%m}/{slug}/'
 ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{slug}/index.html'
 
-# Pages structure  
-PAGE_URL = 'pages/{slug}/'
-PAGE_SAVE_AS = 'pages/{slug}/index.html'
+# Pages structure - no "pages/" prefix
+PAGE_URL = '{slug}/'
+PAGE_SAVE_AS = '{slug}/index.html'
 
-# Clean pagination
-PAGINATED_URL = 'page/{number}/'
-PAGINATED_SAVE_AS = 'page/{number}/index.html'
+# Clean pagination - use simple numbers
+PAGINATED_URL = '{number}/'
+PAGINATED_SAVE_AS = '{number}/index.html'
 
-# Author pages
-AUTHOR_URL = 'author/{slug}/'
-AUTHOR_SAVE_AS = 'author/{slug}/index.html'
+# Author pages - no "author/" prefix
+AUTHOR_URL = '{slug}/'
+AUTHOR_SAVE_AS = '{slug}/index.html'
 
-# Category pages
-CATEGORY_URL = 'category/{slug}/'
-CATEGORY_SAVE_AS = 'category/{slug}/index.html'
+# Category pages - no "category/" prefix
+CATEGORY_URL = '{slug}/'
+CATEGORY_SAVE_AS = '{slug}/index.html'
 
-# Archives
+# Archives - simple name
 ARCHIVES_SAVE_AS = 'archives/index.html'
 
 # Tags - disable individual tag pages, keep only tags listing
 TAG_SAVE_AS = ''
 TAGS_SAVE_AS = 'tags/index.html'
 
-# Categories listing
+# Categories listing - simple name
 CATEGORIES_SAVE_AS = 'categories/index.html'
 
-# Authors listing
+# Authors listing - simple name
 AUTHORS_SAVE_AS = 'authors/index.html'
 
 # Uncomment following line if you want document-relative URLs when developing

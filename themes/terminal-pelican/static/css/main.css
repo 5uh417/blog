@@ -748,6 +748,24 @@ hr {
   text-align: center;
 }
 
+/* Social Links */
+.social {
+  margin-bottom: 20px;
+  font-size: 0.9em;
+}
+
+.social__link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: normal;
+  transition: color 0.2s ease;
+}
+
+.social__link:hover {
+  color: var(--foreground);
+  text-decoration: underline;
+}
+
 .copyright {
   color: color-mix(in srgb, var(--foreground) 65%, transparent);
   font-size: 0.9em;
